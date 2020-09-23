@@ -4,6 +4,7 @@ public class Game
 {
 	public static void main(String[] args)
 	{
+		int total_throw=0;
 		int pos=0;
 		int no_play=0;
 		int Ladder=1;
@@ -11,7 +12,8 @@ public class Game
 		while(pos!=100)
 		{	
 			int dice_no=(int)Math.floor(Math.random()*100)%7;
-			int options=(int)Math.floor(Math.random()*100)%3; 
+			int options=(int)Math.floor(Math.random()*100)%3;
+			total_throw+=1;
 			switch(options)
 		  {
 	        case 0:
@@ -31,7 +33,9 @@ public class Game
 	        	break; 	
 	        
 		  }
-		}  
+		}
+		System.out.println("no. of times dice was thrown :"+total_throw);
+		
 	}
 	
 }
