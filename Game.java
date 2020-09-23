@@ -18,7 +18,8 @@ public class Game
 	        	System.out.println("No play, you are at position "+pos);
 	        	break;
 	        case 1:
-	        	pos+=dice_no;
+	        	if(pos+dice_no<=100)
+	        	    pos+=dice_no;
 	        	System.out.println("Ladder, you are at position "+pos);
 	        	break;
 	        case 2:
